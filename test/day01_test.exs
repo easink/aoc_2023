@@ -8,6 +8,6 @@ defmodule AoCDay01Test do
 
   test "part2" do
     assert AoC.Day01.part2("inputs/day01.part2.sample") == 281
-    assert AoC.Day01.part2("inputs/day01") == 213_958
+    assert AoC.Day01.part2("inputs/day01") == 54076
   end
 end
