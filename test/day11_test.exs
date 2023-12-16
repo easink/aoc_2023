@@ -1,4 +1,4 @@
-defmodule AoCDay10Test do
+defmodule AoCDay11Test do
   use ExUnit.Case
 
   test "part1" do
