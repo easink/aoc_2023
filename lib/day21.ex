@@ -281,29 +281,29 @@ defmodule AoC.Day21 do
     {xn, yn}
   end
 
-  defp print(gardeners, rocks, {width, height} = size) do
-    {{min_x, max_x}, {min_y, max_y}} = max_coord(gardeners)
+  # defp print(gardeners, rocks, {width, height} = size) do
+  #   {{min_x, max_x}, {min_y, max_y}} = max_coord(gardeners)
 
-    from_x = div(min_x - width + 1, width) * width
-    to_x = div(max_x + width - 1, width) * width
-    from_y = div(min_y - height + 1, height) * height
-    to_y = div(max_y + height - 1, height) * height
+  #   from_x = div(min_x - width + 1, width) * width
+  #   to_x = div(max_x + width - 1, width) * width
+  #   from_y = div(min_y - height + 1, height) * height
+  #   to_y = div(max_y + height - 1, height) * height
 
-    for y <- from_y..to_y do
-      IO.puts("")
+  #   for y <- from_y..to_y do
+  #     IO.puts("")
 
-      for x <- from_x..to_x do
-        board_coord = coord_to_board_coord({x, y}, size)
+  #     for x <- from_x..to_x do
+  #       board_coord = coord_to_board_coord({x, y}, size)
 
-        cond do
-          {x, y} in gardeners -> IO.write("O")
-          board_coord in rocks -> IO.write("#")
-          true -> IO.write(".")
-        end
-      end
-    end
+  #       cond do
+  #         {x, y} in gardeners -> IO.write("O")
+  #         board_coord in rocks -> IO.write("#")
+  #         true -> IO.write(".")
+  #       end
+  #     end
+  #   end
 
-    IO.puts("")
-    gardeners
-  end
+  #   IO.puts("")
+  #   gardeners
+  # end
 end
