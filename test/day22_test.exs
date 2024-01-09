@@ -1,8 +1,6 @@
 defmodule AoCDay22Test do
   use ExUnit.Case
 
-  @moduletag timeout: :infinity
-
   test "part1" do
     assert AoC.Day22.part1("inputs/day22.sample") == 5
     assert AoC.Day22.part1("inputs/day22") == 480
